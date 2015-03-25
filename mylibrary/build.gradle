@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'bintray-release'
 
 android {
 	compileSdkVersion 22
@@ -21,4 +22,15 @@ android {
 dependencies {
 	compile fileTree(dir: 'libs', include: ['*.jar'])
 	compile 'com.android.support:appcompat-v7:22.0.0'
+}
+
+publish {
+	userOrg = 'kenumir'
+	groupId = 'com.kenumir'
+	artifactId = 'MaterialSettings'
+	version = '1.2.1'
+	description = 'MaterialSettings - small library to create settings activity'
+	website = 'https://github.com/kenumir/MaterialSettings'
+	issueTracker = "${website}/issues"
+	repository = "${website}.git"
 }
